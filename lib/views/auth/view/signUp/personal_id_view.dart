@@ -73,9 +73,7 @@ class PersonalId extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, '/home', (route) => false);
-                    
+                Navigator.pushNamed(context, '/home');
               },
             ),
           )

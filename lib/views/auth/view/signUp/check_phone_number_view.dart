@@ -16,7 +16,7 @@ class CheckPhoneNumber extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: signUpAppBar,
+      appBar: authAppBar("Sign Up"),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

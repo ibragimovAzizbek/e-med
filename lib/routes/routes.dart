@@ -1,10 +1,9 @@
-import 'package:emed/views/auth/view/check_phone_number_view.dart';
-import 'package:emed/views/auth/view/personal_id_view.dart';
-import 'package:emed/views/auth/view/sign_in_view.dart';
+import 'package:emed/views/auth/view/signUp/check_phone_number_view.dart';
+import 'package:emed/views/auth/view/signUp/personal_id_view.dart';
+import 'package:emed/views/auth/view/sign_in/sign_in_view.dart';
 import 'package:emed/views/auth/view/sign_in_or_register.dart';
-import 'package:emed/views/auth/view/sign_up_view.dart';
+import 'package:emed/views/auth/view/signUp/sign_up_view.dart';
 import 'package:emed/views/splash/splash_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class RouteController {

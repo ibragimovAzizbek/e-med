@@ -1,6 +1,7 @@
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SignInOrRegister extends StatelessWidget {
   const SignInOrRegister({Key? key}) : super(key: key);
@@ -13,15 +14,7 @@ class SignInOrRegister extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              "e-med",
-              style: TextStyle(
-                color: ColorConst.blue,
-                fontSize: 33,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
+            SvgPicture.asset('assets/icons/e-med_blue.svg'),
             SizedBox(height: context.h * 0.1),
             const Center(
               child: Text(
