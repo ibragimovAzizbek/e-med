@@ -3,6 +3,7 @@ import 'package:emed/views/auth/view/signUp/personal_id_view.dart';
 import 'package:emed/views/auth/view/sign_in/sign_in_view.dart';
 import 'package:emed/views/auth/view/sign_in_or_register.dart';
 import 'package:emed/views/auth/view/signUp/sign_up_view.dart';
+import 'package:emed/views/home/view/home_view.dart';
 import 'package:emed/views/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -34,6 +35,9 @@ class RouteController {
 
       case '/personalId':
         return MaterialPageRoute(builder: (context) => PersonalId());
+
+      case '/home':
+        return MaterialPageRoute(builder: (context) => HomeView());
     }
   }
 }

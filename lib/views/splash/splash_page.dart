@@ -1,5 +1,6 @@
 import 'package:emed/core/constants/color_const.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -21,16 +22,7 @@ class _SplashPageState extends State<SplashPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ColorConst.blue,
-      body: Center(
-        child: Text(
-          "e-med",
-          style: TextStyle(
-            color: ColorConst.white,
-            fontSize: 35,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
+      body: Center(child: SvgPicture.asset('assets/icons/e-med_white.svg', fit: BoxFit.cover,)),
     );
   }
 }

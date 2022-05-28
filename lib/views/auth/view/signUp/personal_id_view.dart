@@ -49,7 +49,7 @@ class PersonalId extends StatelessWidget {
             width: context.w * 0.8,
             decoration: BoxDecoration(
               border: Border.all(color: ColorConst.blue),
-              color: ColorConst.grey,
+              color: ColorConst.grey05,
               borderRadius: BorderRadius.circular(10),
             ),
             child: const Center(
