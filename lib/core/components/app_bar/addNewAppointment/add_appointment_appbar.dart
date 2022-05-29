@@ -1,6 +1,5 @@
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/services/naigation/navigation_service.dart';
-import 'package:emed/views/addNewAppointment/cubit/add_new_appointment_cubit.dart';
 import 'package:flutter/material.dart';
 
 get addNewAppointmentAppBar => AppBar(

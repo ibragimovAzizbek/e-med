@@ -54,7 +54,7 @@ class RouteController {
 
       case '/addappointmetthedoctor':
         return MaterialPageRoute(
-            builder: (context) => AddNewAppointmentPageDoctor());
+            builder: (context) => AddNewAppointmentPageDoctor(index: args as int,));
     }
   }
 }

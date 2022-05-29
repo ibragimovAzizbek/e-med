@@ -160,28 +160,7 @@ class AddNewAppointmentBodyWidget extends StatelessWidget {
   shoSnackBarInCalendar(context) => showModalBottomSheet(
         context: context,
         builder: (context) {
-          return Text("Date Time");
+          return Text("Date Time enter");
         },
-      );
-
-  Center inputDataMethodWithMenu(BuildContext context,
-      {required DropdownButton dropdownButton}) {
-    return Center(
-      child: Container(
-        padding: const EdgeInsets.only(left: 15, right: 10),
-        width: context.w * 0.9,
-        height: context.h * 0.075,
-        decoration: BoxDecoration(
-          border: Border.all(color: ColorConst.grey05),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: DropdownButtonHideUnderline(child: dropdownButton),
-      ),
-    );
-  }
-
-  Padding inpuDataName(String name, BuildContext context) => Padding(
-        padding: EdgeInsets.only(left: context.w * 0.05),
-        child: Text(name, style: const TextStyle(fontSize: 16)),
       );
 }

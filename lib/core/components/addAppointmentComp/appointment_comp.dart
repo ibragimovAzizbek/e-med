@@ -1,4 +1,6 @@
+import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/data/mock/regions_district/mock_data.dart';
+import 'package:emed/extension/mq_extension.dart';
 import 'package:emed/views/addNewAppointment/cubit/add_new_appointment_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,12 +37,30 @@ DropdownButton changeStatus(
           case 5:
             context.read<AddNewAppointmentCubit>().changeService(status);
             break;
-          case 6:
-            context.read<AddNewAppointmentCubit>().changeTime(status);
-            break;
         }
       },
     );
+
+Padding inpuDataName(String name, BuildContext context) => Padding(
+      padding: EdgeInsets.only(left: context.w * 0.05),
+      child: Text(name, style: const TextStyle(fontSize: 16)),
+    );
+
+Center inputDataMethodWithMenu(BuildContext context,
+    {required DropdownButton dropdownButton}) {
+  return Center(
+    child: Container(
+      padding: const EdgeInsets.only(left: 15, right: 10),
+      width: context.w * 0.9,
+      height: context.h * 0.075,
+      decoration: BoxDecoration(
+        border: Border.all(color: ColorConst.grey05),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: DropdownButtonHideUnderline(child: dropdownButton),
+    ),
+  );
+}
 
 // ? -- -- -- -- -- -- -- -- -- -- -- -- -- items bottom
 

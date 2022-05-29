@@ -1,3 +1,4 @@
+import 'package:emed/core/components/app_bar/info_and_appointment_appbar.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/data/mock/regions_district/mock_data.dart';
 import 'package:emed/extension/mq_extension.dart';
@@ -12,34 +13,7 @@ class InfoDoctorView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        leadingWidth: 80,
-        leading: TextButton(
-          child: Row(
-            children: [
-              Icon(
-                Icons.chevron_left,
-                color: ColorConst.blue,
-              ),
-              Text(
-                "Back",
-                style: TextStyle(
-                  fontSize: 18,
-                  color: ColorConst.blue,
-                ),
-              ),
-            ],
-          ),
-          onPressed: () {
-            NavigationService.pop();
-          },
-        ),
-        title: Text(
-          doctors[index],
-          style: TextStyle(color: ColorConst.black, fontSize: 18),
-        ),
-      ),
+      appBar: infoAndAppointmentAppBar(index),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -119,7 +93,7 @@ class InfoDoctorView extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/addappointmetthedoctor');
+                Navigator.pushNamed(context, '/addappointmetthedoctor', arguments: index);
               },
               child: const Text(
                 "Add new appiontment",
