@@ -1,3 +1,4 @@
+import 'package:emed/views/addNewAppointment/view/add_appointment_view.dart';
 import 'package:emed/views/auth/view/signUp/check_phone_number_view.dart';
 import 'package:emed/views/auth/view/signUp/personal_id_view.dart';
 import 'package:emed/views/auth/view/sign_in/sign_in_view.dart';
@@ -38,6 +39,9 @@ class RouteController {
 
       case '/home':
         return MaterialPageRoute(builder: (context) => HomeView());
+
+      case '/addNewAppoinment':
+        return MaterialPageRoute(builder: (context) => AddNewAppointmentView());
     }
   }
 }

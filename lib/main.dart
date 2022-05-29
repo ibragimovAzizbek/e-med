@@ -1,5 +1,7 @@
 import 'package:emed/core/components/theme/theme_comp.dart';
 import 'package:emed/routes/routes.dart';
+import 'package:emed/services/naigation/navigation_service.dart';
+import 'package:emed/views/addNewAppointment/cubit/add_new_appointment_cubit.dart';
 import 'package:emed/views/auth/cubit/auth_cubit.dart';
 import 'package:emed/views/home/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +12,8 @@ void main() {
     MultiBlocProvider(
       providers: [
         BlocProvider(create: (context) => AuthCubit()),
-        BlocProvider(create: (context) => HomeCubit())
+        BlocProvider(create: (context) => HomeCubit()),
+        BlocProvider(create: (context) => AddNewAppointmentCubit())
       ],
       child: const MyApp(),
     ),
@@ -26,6 +29,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'E-med',
       theme: lightMode,
+      navigatorKey: NavigationService.navigatorKey,
       initialRoute: '/splash',
       onGenerateRoute: RouteController.inherentce.onGenerateRoute,
     );
