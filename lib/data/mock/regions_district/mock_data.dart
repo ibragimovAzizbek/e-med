@@ -249,4 +249,26 @@ Map mockData = {
   ],
 };
 
+List doctors = [
+  "Movlonov Bobirjon",
+  "Usmonow Jamshid",
+  "Qo'ziyev Alisher",
+  "Teshaboev Bolta",
+  "Alisherov Qosim",
+  "Sheraliev Sherali",
+  "Qo'ziov Qo'zi",
+  "Qo'ziyev Qo'chqor",
+  "Qo'ziyev Shermat",
+];
 
+List position = [
+  "Pediatric Pulmonolog",
+  "Anesthesiology",
+  "Allergy & Immunology",
+  "Pediatric Pulmonolog",
+  "Endocrinology",
+  "Pediatric Pulmonolog",
+  "Endocrinology",
+  "Allergy & Immunology",
+  "Anesthesiology",
+];

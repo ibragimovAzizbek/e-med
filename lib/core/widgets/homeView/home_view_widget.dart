@@ -1,3 +1,4 @@
+import 'package:emed/core/components/app_bar/homeAppbar/home_app_bar.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:emed/views/home/cubit/home_cubit.dart';
@@ -19,6 +20,7 @@ class HomeViewWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          homeAppBar,
           const Divider(),
           const Padding(
             padding: EdgeInsets.all(15),

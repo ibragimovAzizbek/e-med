@@ -1,9 +1,8 @@
-import 'package:calendar_calendar/calendar_calendar.dart';
 import 'package:emed/core/components/addAppointmentComp/appointment_comp.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:emed/views/addNewAppointment/cubit/add_new_appointment_cubit.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:emed/views/home/cubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -141,7 +140,15 @@ class AddNewAppointmentBodyWidget extends StatelessWidget {
                   fontSize: 18,
                 ),
               ),
-              onPressed: () {},
+              onPressed: () {
+                // ! KAMCHILIKLARINI TO"LDIR
+                BlocProvider.of<HomeCubit>(context).currentIndex = 2;
+                Navigator.pushNamedAndRemoveUntil(
+                  context,
+                  '/home',
+                  (route) => false,
+                );
+              },
             ),
           ),
           const SizedBox(height: 30),
@@ -151,10 +158,11 @@ class AddNewAppointmentBodyWidget extends StatelessWidget {
   }
 
   shoSnackBarInCalendar(context) => showModalBottomSheet(
-      context: context,
-      builder: (context) {
-        return Text("data");
-      });
+        context: context,
+        builder: (context) {
+          return Text("Date Time");
+        },
+      );
 
   Center inputDataMethodWithMenu(BuildContext context,
       {required DropdownButton dropdownButton}) {

@@ -30,3 +30,21 @@ get homeAppBar => AppBar(
         )
       ],
     );
+
+get homeAppBarNotNotification => Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+            icon: Image.asset('assets/images/profile.png'),
+            onPressed: () {},
+          ),
+          SvgPicture.asset('assets/icons/home_app_bar_icon.svg'),
+          IconButton(
+            icon: SvgPicture.asset('assets/icons/filter.svg'),
+            onPressed: () {},
+          ),
+        ],
+      ),
+    );

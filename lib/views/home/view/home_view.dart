@@ -1,6 +1,8 @@
-import 'package:emed/core/components/app_bar/homeAppbar/home_app_bar.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/functions/error_snak_bar.dart';
+import 'package:emed/core/widgets/homeView/home_doctor_body.dart';
+import 'package:emed/core/widgets/homeView/home_hospital_body.dart';
+import 'package:emed/core/widgets/homeView/home_treatments_body.dart';
 import 'package:emed/core/widgets/homeView/home_view_widget.dart';
 import 'package:emed/views/home/cubit/home_cubit.dart';
 import 'package:emed/views/home/state/home_state.dart';
@@ -11,27 +13,35 @@ import 'package:flutter_svg/flutter_svg.dart';
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
 
+  List<Widget> bodys = [
+    HomeViewWidget(),
+    HomeTrarmentsBody(),
+    HomeDoctorBody(),
+    HomeHospetalBody(),
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: homeAppBar,
-      body: BlocConsumer<HomeCubit, HomeState>(
-        listener: (context, state) {
-          if (state is HomeError) {
-            showErrorSnackBar(context, "Another Error");
-          }
-        },
-        builder: (context, state) {
-          if (state is HomeInitial) {
-            return HomeViewWidget();
-          } else if (state is HomeLoading) {
-            return const Center(
-              child: CircularProgressIndicator.adaptive(),
-            );
-          } else {
-            return showErrorSnackBar(context, "Another Error");
-          }
-        },
+      body: SafeArea(
+        child: BlocConsumer<HomeCubit, HomeState>(
+          listener: (context, state) {
+            if (state is HomeError) {
+              showErrorSnackBar(context, "Another Error");
+            }
+          },
+          builder: (context, state) {
+            if (state is HomeInitial) {
+              return bodys[context.watch<HomeCubit>().currentIndex];
+            } else if (state is HomeLoading) {
+              return const Center(
+                child: CircularProgressIndicator.adaptive(),
+              );
+            } else {
+              return showErrorSnackBar(context, "Another Error");
+            }
+          },
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         fixedColor: ColorConst.bottomLabel,

@@ -1,3 +1,4 @@
+import 'package:emed/views/addNewAppointment/view/add_appoinmet_with_doctor_info_page.dart';
 import 'package:emed/views/addNewAppointment/view/add_appointment_view.dart';
 import 'package:emed/views/auth/view/signUp/check_phone_number_view.dart';
 import 'package:emed/views/auth/view/signUp/personal_id_view.dart';
@@ -5,6 +6,7 @@ import 'package:emed/views/auth/view/sign_in/sign_in_view.dart';
 import 'package:emed/views/auth/view/sign_in_or_register.dart';
 import 'package:emed/views/auth/view/signUp/sign_up_view.dart';
 import 'package:emed/views/home/view/home_view.dart';
+import 'package:emed/views/infoDoctor/view/info_doctor_view.dart';
 import 'package:emed/views/splash/splash_page.dart';
 import 'package:flutter/material.dart';
 
@@ -42,6 +44,17 @@ class RouteController {
 
       case '/addNewAppoinment':
         return MaterialPageRoute(builder: (context) => AddNewAppointmentView());
+
+      case '/infoDoctor':
+        return MaterialPageRoute(
+          builder: (context) => InfoDoctorView(
+            index: (args as int),
+          ),
+        );
+
+      case '/addappointmetthedoctor':
+        return MaterialPageRoute(
+            builder: (context) => AddNewAppointmentPageDoctor());
     }
   }
 }
