@@ -41,7 +41,6 @@ dependencies:
   syncfusion_flutter_calendar: ^20.1.57
   hive: ^2.2.1
   hive_flutter: ^1.1.0
-  calendar_appbar: ^0.0.6
   calendar_calendar: ^1.0.0
   flutter_rating_bar: ^4.0.1
 

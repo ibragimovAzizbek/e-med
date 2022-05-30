@@ -1,9 +1,9 @@
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/functions/error_snak_bar.dart';
-import 'package:emed/core/widgets/homeView/home_doctor_body.dart';
-import 'package:emed/core/widgets/homeView/home_hospital_body.dart';
-import 'package:emed/core/widgets/homeView/home_treatments_body.dart';
-import 'package:emed/core/widgets/homeView/home_view_widget.dart';
+import 'package:emed/core/widgets/homeView/doctor/home_doctor_body.dart';
+import 'package:emed/core/widgets/homeView/hospital/home_hospital_body.dart';
+import 'package:emed/core/widgets/homeView/home/home_view_widget.dart';
+import 'package:emed/core/widgets/homeView/treatments/treaments_body_view.dart';
 import 'package:emed/views/home/cubit/home_cubit.dart';
 import 'package:emed/views/home/state/home_state.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +14,8 @@ class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
 
   List<Widget> bodys = [
-    HomeViewWidget(),
-    HomeTrarmentsBody(),
+    HomeViewBodyWidget(),
+    TreamentsBodyView(),
     HomeDoctorBody(),
     HomeHospetalBody(),
   ];

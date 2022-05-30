@@ -1,8 +1,9 @@
 import 'package:emed/core/components/app_bar/info_and_appointment_appbar.dart';
+import 'package:emed/core/components/home_body_comp/text_darck_60_90.dart';
 import 'package:emed/core/constants/color_const.dart';
+import 'package:emed/core/constants/font_const.dart';
 import 'package:emed/data/mock/regions_district/mock_data.dart';
 import 'package:emed/extension/mq_extension.dart';
-import 'package:emed/services/naigation/navigation_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
@@ -43,26 +44,62 @@ class InfoDoctorView extends StatelessWidget {
             ),
           ),
           SizedBox(height: context.h * 0.04),
-          textDarck60("Place of work", context),
+          textDarck(
+            "Place of work",
+            context,
+            color: ColorConst.darck60,
+            size: FontConst.kMediumFont,
+          ),
           const SizedBox(height: 10),
-          textDarck90("Pediatric hospital №14", context),
+          textDarck(
+            "Pediatric hospital №14",
+            context,
+            color: ColorConst.darck90,
+            size: FontConst.kTextLargeFont,
+            fontWeight: FontWeight.bold,
+          ),
           // ? --------
           SizedBox(height: context.h * 0.04),
-          textDarck60("Work location", context),
+          textDarck(
+            "Work location",
+            context,
+            color: ColorConst.darck60,
+            size: FontConst.kMediumFont,
+          ),
           const SizedBox(height: 10),
-          textDarck90(
-              "Shaykhantakhur district, st.\n \nZulfiyahonim, 18 Tashkent, 100128",
-              context),
+          textDarck(
+            "Shaykhantakhur district, st.\n \nZulfiyahonim, 18 Tashkent, 100128",
+            context,
+            color: ColorConst.darck90,
+            size: FontConst.kTextLargeFont,
+            fontWeight: FontWeight.bold,
+          ),
 
           // ? --------
 
           SizedBox(height: context.h * 0.04),
-          textDarck60("Available time", context),
+          textDarck(
+            "Available time",
+            context,
+            color: ColorConst.darck60,
+            size: FontConst.kMediumFont,
+          ),
           const SizedBox(height: 10),
-          textDarck90("Monday - Saturday\n\n10:00 - 16:00", context),
+          textDarck(
+            "Monday - Saturday\n\n10:00 - 16:00",
+            context,
+            color: ColorConst.darck90,
+            size: FontConst.kTextLargeFont,
+            fontWeight: FontWeight.bold,
+          ),
 
           SizedBox(height: context.h * 0.03),
-          textDarck60("Rating", context),
+          textDarck(
+            "Rating",
+            context,
+            color: ColorConst.darck60,
+            size: FontConst.kMediumFont,
+          ),
           Padding(
             padding: const EdgeInsets.all(10),
             child: RatingBar.builder(
@@ -93,7 +130,8 @@ class InfoDoctorView extends StatelessWidget {
                 ),
               ),
               onPressed: () {
-                Navigator.pushNamed(context, '/addappointmetthedoctor', arguments: index);
+                Navigator.pushNamed(context, '/addappointmetthedoctor',
+                    arguments: index);
               },
               child: const Text(
                 "Add new appiontment",
@@ -102,33 +140,6 @@ class InfoDoctorView extends StatelessWidget {
             ),
           )
         ],
-      ),
-    );
-  }
-
-  Padding textDarck90(text, BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: context.w * 0.06),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 18,
-          color: ColorConst.darck90,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-    );
-  }
-
-  Padding textDarck60(text, BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: context.w * 0.06),
-      child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 16,
-          color: ColorConst.darck60,
-        ),
       ),
     );
   }

@@ -23,6 +23,6 @@ get addNewAppointmentAppBar => AppBar(
           fontSize: 18,
           fontWeight: FontWeight.bold,
           color: ColorConst.black,
-        ),
+        ), 
       ),
     );

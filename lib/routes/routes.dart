@@ -8,6 +8,7 @@ import 'package:emed/views/auth/view/signUp/sign_up_view.dart';
 import 'package:emed/views/home/view/home_view.dart';
 import 'package:emed/views/infoDoctor/view/info_doctor_view.dart';
 import 'package:emed/views/splash/splash_page.dart';
+import 'package:emed/views/traetments/treatments_detalis_page.dart';
 import 'package:flutter/material.dart';
 
 class RouteController {
@@ -54,7 +55,17 @@ class RouteController {
 
       case '/addappointmetthedoctor':
         return MaterialPageRoute(
-            builder: (context) => AddNewAppointmentPageDoctor(index: args as int,));
+          builder: (context) => AddNewAppointmentPageDoctor(
+            index: args as int,
+          ),
+        );
+
+      case '/treatDetalis':
+        return MaterialPageRoute(
+          builder: (context) => TreanmentDetalisPage(
+            indexDoctor: args as int,
+          ),
+        );
     }
   }
 }

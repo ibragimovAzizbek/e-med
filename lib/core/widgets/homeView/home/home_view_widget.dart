@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-class HomeViewWidget extends StatelessWidget {
-  HomeViewWidget({Key? key}) : super(key: key);
+class HomeViewBodyWidget extends StatelessWidget {
+  HomeViewBodyWidget({Key? key}) : super(key: key);
 
   final formKey = GlobalKey<FormState>();
 
