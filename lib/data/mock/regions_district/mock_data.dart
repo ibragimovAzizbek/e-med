@@ -272,3 +272,11 @@ List position = [
   "Allergy & Immunology",
   "Anesthesiology",
 ];
+
+List<String> drugs = ["Salicylic", "Calcipotriol", "Tazorac"];
+
+List<String> drugsMl = [
+  "250 mg",
+  "500 mg",
+  "100 mg",
+];
