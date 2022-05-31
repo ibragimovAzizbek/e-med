@@ -1,4 +1,3 @@
-import 'package:emed/core/components/app_bar/info_and_appointment_appbar.dart';
 import 'package:emed/core/components/home_body_comp/text_darck_60_90.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/constants/font_const.dart';
@@ -260,6 +259,7 @@ Since low potassium sometimes can affect your blood pressure, your doctor will c
         ),
         onTap: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(12),
@@ -269,7 +269,7 @@ Since low potassium sometimes can affect your blood pressure, your doctor will c
             context: context,
             builder: (context) {
               return Container(
-                height: context.h * 0.6,
+                height: context.h * 0.75,
                 width: context.w,
                 decoration: BoxDecoration(
                   color: ColorConst.grey.withOpacity(0.2),
@@ -279,7 +279,7 @@ Since low potassium sometimes can affect your blood pressure, your doctor will c
                   ),
                 ),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
                       alignment: Alignment.center,
@@ -305,7 +305,6 @@ Since low potassium sometimes can affect your blood pressure, your doctor will c
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          // SizedBox(width: context.w * 0.2),
                           TextButton(
                             child: Text(
                               "Ok",
@@ -317,10 +316,101 @@ Since low potassium sometimes can affect your blood pressure, your doctor will c
                             onPressed: () {
                               Navigator.pop(context);
                             },
-                          )
+                          ),
                         ],
                       ),
                     ),
+                    SizedBox(height: context.h * 0.03),
+                    textDarck(
+                      'Drug name',
+                      context,
+                      size: FontConst.kMediumFont,
+                      color: ColorConst.darck60,
+                    ),
+                    const SizedBox(height: 10),
+                    textDarck(
+                      drugs[mode],
+                      context,
+                      size: FontConst.kTextLargeFont,
+                      color: ColorConst.darck90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: context.h * 0.04),
+                    textDarck(
+                      'Dose',
+                      context,
+                      size: FontConst.kMediumFont,
+                      color: ColorConst.darck60,
+                    ),
+                    const SizedBox(height: 10),
+                    textDarck(
+                      drugsMl[mode],
+                      context,
+                      size: FontConst.kTextLargeFont,
+                      color: ColorConst.darck90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: context.h * 0.04),
+                    textDarck(
+                      'Taking dates (start-end)',
+                      context,
+                      size: FontConst.kMediumFont,
+                      color: ColorConst.darck60,
+                    ),
+                    const SizedBox(height: 10),
+                    textDarck(
+                      "20.11.2022 - 30.11.2022",
+                      context,
+                      size: FontConst.kTextLargeFont,
+                      color: ColorConst.darck90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: context.h * 0.04),
+                    textDarck(
+                      'Associated with',
+                      context,
+                      size: FontConst.kMediumFont,
+                      color: ColorConst.darck60,
+                    ),
+                    const SizedBox(height: 10),
+                    textDarck(
+                      "Multiple sclerosis",
+                      context,
+                      size: FontConst.kTextLargeFont,
+                      color: ColorConst.darck90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: context.h * 0.04),
+                    textDarck(
+                      'Comments',
+                      context,
+                      size: FontConst.kMediumFont,
+                      color: ColorConst.darck60,
+                    ),
+                    const SizedBox(height: 10),
+                    textDarck(
+                      "Consume without water. It lessens the effect",
+                      context,
+                      size: FontConst.kTextLargeFont,
+                      color: ColorConst.darck90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: context.h * 0.04),
+                    textDarck(
+                      'Drug name',
+                      context,
+                      size: FontConst.kMediumFont,
+                      color: ColorConst.darck60,
+                    ),
+                    const SizedBox(height: 10),
+                    textDarck(
+                      drugs[mode],
+                      context,
+                      size: FontConst.kTextLargeFont,
+                      color: ColorConst.darck90,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    SizedBox(height: context.h * 0.04),
                   ],
                 ),
               );

@@ -1,3 +1,4 @@
+import 'package:emed/core/base/base_view/base_view.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/functions/error_snak_bar.dart';
 import 'package:emed/core/widgets/homeView/doctor/home_doctor_body.dart';
@@ -22,37 +23,41 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: BlocConsumer<HomeCubit, HomeState>(
-          listener: (context, state) {
-            if (state is HomeError) {
-              showErrorSnackBar(context, "Another Error");
-            }
-          },
-          builder: (context, state) {
-            if (state is HomeInitial) {
-              return bodys[context.watch<HomeCubit>().currentIndex];
-            } else if (state is HomeLoading) {
-              return const Center(
-                child: CircularProgressIndicator.adaptive(),
-              );
-            } else {
-              return showErrorSnackBar(context, "Another Error");
-            }
-          },
-        ),
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-        fixedColor: ColorConst.bottomLabel,
-        currentIndex: context.watch<HomeCubit>().currentIndex,
-        backgroundColor: ColorConst.bottomBackGround,
-        items: itemsButton(context),
-        onTap: (index) {
-          context.read<HomeCubit>().changePageHome(index);
-        },
-      ),
-    );
+    return BaseView(
+        viewModel: HomeView,
+        onPageBuilder: (context, widget) {
+          return Scaffold(
+            body: SafeArea(
+              child: BlocConsumer<HomeCubit, HomeState>(
+                listener: (context, state) {
+                  if (state is HomeError) {
+                    showErrorSnackBar(context, "Another Error");
+                  }
+                },
+                builder: (context, state) {
+                  if (state is HomeInitial) {
+                    return bodys[context.watch<HomeCubit>().currentIndex];
+                  } else if (state is HomeLoading) {
+                    return const Center(
+                      child: CircularProgressIndicator.adaptive(),
+                    );
+                  } else {
+                    return showErrorSnackBar(context, "Another Error");
+                  }
+                },
+              ),
+            ),
+            bottomNavigationBar: BottomNavigationBar(
+              fixedColor: ColorConst.bottomLabel,
+              currentIndex: context.watch<HomeCubit>().currentIndex,
+              backgroundColor: ColorConst.bottomBackGround,
+              items: itemsButton(context),
+              onTap: (index) {
+                context.read<HomeCubit>().changePageHome(index);
+              },
+            ),
+          );
+        });
   }
 
   itemsButton(BuildContext context) {
