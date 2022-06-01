@@ -119,7 +119,6 @@ class HomeViewBodyWidget extends StatelessWidget {
         SizedBox(height: context.h * 0.08),
         Center(
           child: ElevatedButton(
-            child: Text("Add new appointment", style: TextStyle(fontSize: 18)),
             style: ElevatedButton.styleFrom(
                 primary: ColorConst.blue,
                 fixedSize: Size(
@@ -128,6 +127,8 @@ class HomeViewBodyWidget extends StatelessWidget {
                 ),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12))),
+            child: const Text("Add new appointment",
+                style: TextStyle(fontSize: 18)),
             onPressed: () {
               Navigator.pushNamed(context, '/addNewAppoinment');
             },

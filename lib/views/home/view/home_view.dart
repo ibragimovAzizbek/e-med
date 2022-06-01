@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:emed/core/base/base_view/base_view.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/functions/error_snak_bar.dart';
@@ -17,8 +19,8 @@ class HomeView extends StatelessWidget {
   List<Widget> bodys = [
     HomeViewBodyWidget(),
     TreamentsBodyView(),
-    HomeDoctorBody(),
-    HomeHospetalBody(),
+    const HomeDoctorBody(),
+    const HomeHospetalBody(),
   ];
 
   @override

@@ -16,7 +16,7 @@ class AddNewAppointmentView extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           if (state is AddNewAppointmentInitial) {
-            return AddNewAppointmentBodyWidget();
+            return const AddNewAppointmentBodyWidget();
           } else if (state is AddNewAppointmentLoading) {
             return const Center(child: CircularProgressIndicator.adaptive());
           } else {

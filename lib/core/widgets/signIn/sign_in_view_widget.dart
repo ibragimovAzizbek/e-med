@@ -50,6 +50,7 @@ class SignInViewWidget extends StatelessWidget {
                       if (number!.isEmpty) {
                         return "Enter your name";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -85,6 +86,7 @@ class SignInViewWidget extends StatelessWidget {
                       if (pass!.isEmpty) {
                         return "Enter new password";
                       }
+                      return null;
                     },
                   ),
                 ),

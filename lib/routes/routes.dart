@@ -23,28 +23,31 @@ class RouteController {
 
     switch (settings.name) {
       case '/splash':
-        return MaterialPageRoute(builder: (context) => SplashPage());
+        return MaterialPageRoute(builder: (context) => const SplashPage());
 
       case '/signInOrRegister':
-        return MaterialPageRoute(builder: (context) => SignInOrRegister());
+        return MaterialPageRoute(
+            builder: (context) => const SignInOrRegister());
 
       case '/signIn':
-        return MaterialPageRoute(builder: (context) => SignInView());
+        return MaterialPageRoute(builder: (context) => const SignInView());
 
       case '/signUp':
-        return MaterialPageRoute(builder: (context) => SignUpView());
+        return MaterialPageRoute(builder: (context) => const SignUpView());
 
       case '/checkPhoneNumber':
-        return MaterialPageRoute(builder: (context) => CheckPhoneNumber());
+        return MaterialPageRoute(
+            builder: (context) => const CheckPhoneNumber());
 
       case '/personalId':
-        return MaterialPageRoute(builder: (context) => PersonalId());
+        return MaterialPageRoute(builder: (context) => const PersonalId());
 
       case '/home':
         return MaterialPageRoute(builder: (context) => HomeView());
 
       case '/addNewAppoinment':
-        return MaterialPageRoute(builder: (context) => AddNewAppointmentView());
+        return MaterialPageRoute(
+            builder: (context) => const AddNewAppointmentView());
 
       case '/infoDoctor':
         return MaterialPageRoute(
@@ -67,5 +70,6 @@ class RouteController {
           ),
         );
     }
+    return null;
   }
 }

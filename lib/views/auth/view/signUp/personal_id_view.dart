@@ -59,10 +59,6 @@ class PersonalId extends StatelessWidget {
           SizedBox(height: context.h * 0.1),
           Center(
             child: ElevatedButton(
-              child: Text(
-                "Go to your account",
-                style: TextStyle(fontSize: 18),
-              ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
@@ -71,6 +67,10 @@ class PersonalId extends StatelessWidget {
                   context.w * 0.8,
                   context.h * 0.07,
                 ),
+              ),
+              child: const Text(
+                "Go to your account",
+                style: TextStyle(fontSize: 18),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, '/home');

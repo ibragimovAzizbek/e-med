@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:emed/core/components/addAppointmentComp/appointment_comp.dart';
 import 'package:emed/core/components/app_bar/info_and_appointment_appbar.dart';
 import 'package:emed/core/constants/color_const.dart';

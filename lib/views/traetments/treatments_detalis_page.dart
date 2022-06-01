@@ -1,3 +1,5 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:emed/core/components/home_body_comp/text_darck_60_90.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/constants/font_const.dart';

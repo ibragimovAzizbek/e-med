@@ -34,10 +34,6 @@ class SignInOrRegister extends StatelessWidget {
             ),
             SizedBox(height: context.h * 0.18),
             ElevatedButton(
-              child: Text(
-                "Get Started",
-                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-              ),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
@@ -46,6 +42,10 @@ class SignInOrRegister extends StatelessWidget {
                   context.w * 0.8,
                   context.h * 0.075,
                 ),
+              ),
+              child: const Text(
+                "Get Started",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               onPressed: () {
                 Navigator.pushNamed(context, "/signUp");

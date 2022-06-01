@@ -8,7 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class AddNewAppointmentBodyWidget extends StatelessWidget {
-  AddNewAppointmentBodyWidget({Key? key}) : super(key: key);
+  const AddNewAppointmentBodyWidget({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -160,7 +160,7 @@ class AddNewAppointmentBodyWidget extends StatelessWidget {
   shoSnackBarInCalendar(context) => showModalBottomSheet(
         context: context,
         builder: (context) {
-          return Text("Date Time enter");
+          return const Text("Date Time enter");
         },
       );
 }

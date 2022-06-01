@@ -48,6 +48,7 @@ class SignUpViewWidget extends StatelessWidget {
                       if (name!.isEmpty) {
                         return "Enter your name";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -71,6 +72,7 @@ class SignUpViewWidget extends StatelessWidget {
                       if (number!.isEmpty) {
                         return "Enter your name";
                       }
+                      return null;
                     },
                   ),
                 ),
@@ -112,6 +114,7 @@ class SignUpViewWidget extends StatelessWidget {
                       if (pass!.isEmpty) {
                         return "Enter new password";
                       }
+                      return null;
                     },
                   ),
                 ),

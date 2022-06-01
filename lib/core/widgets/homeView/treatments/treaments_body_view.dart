@@ -1,9 +1,12 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/constants/font_const.dart';
 import 'package:emed/data/mock/regions_district/mock_data.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 
 class TreamentsBodyView extends StatefulWidget {
   TreamentsBodyView({Key? key}) : super(key: key);
@@ -22,7 +25,7 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
     with TickerProviderStateMixin {
   late TabController _tabController;
 
-  List<Tab> tabs = [
+  List<Tab> tabs = const [
     Tab(
       icon: Text(
         "Current treatment",

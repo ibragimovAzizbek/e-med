@@ -2,8 +2,6 @@ import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/constants/font_const.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:lottie/lottie.dart';
 
 class NoInternetView extends StatelessWidget {

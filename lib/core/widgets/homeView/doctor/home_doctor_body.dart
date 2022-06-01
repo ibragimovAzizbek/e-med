@@ -34,7 +34,7 @@ class HomeDoctorBody extends StatelessWidget {
               onTap: () {},
             ),
           ),
-          Divider(),
+          const Divider(),
           Padding(
             padding: EdgeInsets.only(left: context.w * 0.07),
             child: Text(
@@ -52,7 +52,7 @@ class HomeDoctorBody extends StatelessWidget {
                     ListTile(
                       leading: CircleAvatar(
                         radius: 25,
-                      backgroundImage: NetworkImage(
+                        backgroundImage: NetworkImage(
                           'https://source.unsplash.com/random/$index',
                         ),
                       ),

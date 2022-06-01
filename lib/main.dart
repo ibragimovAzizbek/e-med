@@ -7,8 +7,11 @@ import 'package:emed/views/home/cubit/home_cubit.dart';
 import 'package:emed/views/infoDoctor/cubit/info_doctor_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await GetStorage.init();
   runApp(
     MultiBlocProvider(
       providers: [

@@ -4,14 +4,7 @@ import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
 
 class CheckPhoneNumber extends StatelessWidget {
-  CheckPhoneNumber({Key? key}) : super(key: key);
-
-  // TextEditingController firstController = TextEditingController();
-  // TextEditingController secondController = TextEditingController();
-  // TextEditingController thredController = TextEditingController();
-  // TextEditingController fourthController = TextEditingController();
-  // TextEditingController fifthController = TextEditingController();
-  // TextEditingController sixthController = TextEditingController();
+  const CheckPhoneNumber({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -56,8 +49,6 @@ class CheckPhoneNumber extends StatelessWidget {
           SizedBox(height: context.h * 0.1),
           Center(
             child: ElevatedButton(
-              child: Text("Confirm",
-                  style: TextStyle(fontSize: 18, color: ColorConst.white)),
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)),
@@ -67,6 +58,8 @@ class CheckPhoneNumber extends StatelessWidget {
                   context.h * 0.075,
                 ),
               ),
+              child: Text("Confirm",
+                  style: TextStyle(fontSize: 18, color: ColorConst.white)),
               onPressed: () {
                 Navigator.pushNamedAndRemoveUntil(
                     context, '/personalId', (route) => false);
