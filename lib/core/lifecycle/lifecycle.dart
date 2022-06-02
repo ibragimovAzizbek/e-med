@@ -1,6 +1,10 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 
 class LifecycleWatcher extends StatefulWidget {
+  const LifecycleWatcher({Key? key}) : super(key: key);
+
   @override
   _LifecycleWatcherState createState() => _LifecycleWatcherState();
 }
@@ -28,8 +32,6 @@ class _LifecycleWatcherState extends State<LifecycleWatcher>
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
-    print(
-        "LifecycleWatcherState#didChangeAppLifecycleState state=${state.toString()}");
     setState(() {
       _lastLifecyleState = state;
     });
@@ -37,8 +39,10 @@ class _LifecycleWatcherState extends State<LifecycleWatcher>
 
   @override
   Widget build(BuildContext context) {
-    if (_lastLifecyleState == null)
-      return Text('This widget has not observed any lifecycle changes.');
+    // ignore: unnecessary_null_comparison
+    if (_lastLifecyleState == null) {
+      return const Text('This widget has not observed any lifecycle changes.');
+    }
     return Text(
         'The most recent lifecycle state this widget observed was: $_lastLifecyleState.');
   }

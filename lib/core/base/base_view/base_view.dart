@@ -116,6 +116,7 @@ class _BaseViewState extends State<BaseView> with WidgetsBindingObserver {
 
   @override
   void dispose() {
+    _timer = Timer.periodic(const Duration(seconds: 1), (s) {});
     _timer!.cancel();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();

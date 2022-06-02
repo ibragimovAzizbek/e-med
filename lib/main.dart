@@ -5,6 +5,7 @@ import 'package:emed/views/addNewAppointment/cubit/add_new_appointment_cubit.dar
 import 'package:emed/views/auth/cubit/auth_cubit.dart';
 import 'package:emed/views/home/cubit/home_cubit.dart';
 import 'package:emed/views/infoDoctor/cubit/info_doctor_cubit.dart';
+import 'package:emed/views/search/cubit/search_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_storage/get_storage.dart';
@@ -19,6 +20,7 @@ Future<void> main() async {
         BlocProvider(create: (context) => HomeCubit()),
         BlocProvider(create: (context) => AddNewAppointmentCubit()),
         BlocProvider(create: (context) => InfoDoctorCubit()),
+        BlocProvider(create: (context) => SearchCubit()),
       ],
       child: const MyApp(),
     ),

@@ -1,3 +1,4 @@
+import 'package:emed/core/widgets/search_data/search_data.dart';
 import 'package:emed/views/addNewAppointment/view/add_appoinmet_with_doctor_info_page.dart';
 import 'package:emed/views/addNewAppointment/view/add_appointment_view.dart';
 import 'package:emed/views/auth/view/signUp/check_phone_number_view.dart';
@@ -7,6 +8,7 @@ import 'package:emed/views/auth/view/sign_in_or_register.dart';
 import 'package:emed/views/auth/view/signUp/sign_up_view.dart';
 import 'package:emed/views/home/view/home_view.dart';
 import 'package:emed/views/infoDoctor/view/info_doctor_view.dart';
+import 'package:emed/views/search/view/search_page.dart';
 import 'package:emed/views/splash/splash_page.dart';
 import 'package:emed/views/traetments/treatments_detalis_page.dart';
 import 'package:flutter/material.dart';
@@ -68,6 +70,11 @@ class RouteController {
           builder: (context) => TreanmentDetalisPage(
             indexDoctor: args as int,
           ),
+        );
+
+      case '/searchDoctor':
+        return MaterialPageRoute(
+          builder: (context) => SearchPage(),
         );
     }
     return null;

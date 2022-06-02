@@ -7,7 +7,6 @@ import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-
 class TreamentsBodyView extends StatefulWidget {
   TreamentsBodyView({Key? key}) : super(key: key);
 
@@ -75,19 +74,22 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
           unselectedLabelColor: ColorConst.darck60,
         ),
       ),
-      body: TabBarView(controller: _tabController, children: [
-        currentTreatment(context),
-        Container(
-          height: 60,
-          width: 300,
-          color: ColorConst.blue,
-        ),
-        Container(
-          height: 60,
-          width: 300,
-          color: ColorConst.black,
-        ),
-      ]),
+      body: TabBarView(
+        controller: _tabController,
+        children: [
+          currentTreatment(context),
+          Container(
+            height: 60,
+            width: 300,
+            color: ColorConst.blue,
+          ),
+          Container(
+            height: 60,
+            width: 300,
+            color: ColorConst.black,
+          ),
+        ],
+      ),
     );
   }
 
@@ -103,8 +105,11 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
                 leading: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    doctorsInfoText(position[index], FontConst.kTextLargeFont,
-                        fontWeight: FontWeight.bold),
+                    doctorsInfoText(
+                      position[index],
+                      FontConst.kTextLargeFont,
+                      fontWeight: FontWeight.bold,
+                    ),
                     doctorsInfoText(doctors[index], FontConst.kMediumFont),
                     doctorsInfoText("Family Clinic №42", FontConst.kSmallFont),
                   ],

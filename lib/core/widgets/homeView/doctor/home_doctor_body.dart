@@ -1,5 +1,6 @@
 import 'package:emed/core/components/app_bar/homeAppbar/home_app_bar.dart';
 import 'package:emed/core/constants/color_const.dart';
+import 'package:emed/core/widgets/search_data/search_data.dart';
 import 'package:emed/data/mock/regions_district/mock_data.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
@@ -14,25 +15,9 @@ class HomeDoctorBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           homeAppBarNotNotification,
-          Center(
-            child: GestureDetector(
-              child: Container(
-                height: context.h * 0.05,
-                width: context.w * 0.8,
-                decoration: BoxDecoration(
-                  color: ColorConst.grey.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
-                    Icon(Icons.search),
-                    Text("Search doctors by name or position"),
-                  ],
-                ),
-              ),
-              onTap: () {},
-            ),
+          SearchData(
+            searchName: "Search doctors by name or position",
+            route: '/searchDoctor',
           ),
           const Divider(),
           Padding(
@@ -43,7 +28,7 @@ class HomeDoctorBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: context.h,
+            height: context.h * 0.87,
             width: context.w,
             child: ListView.builder(
               itemBuilder: (context, index) {
