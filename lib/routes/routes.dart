@@ -72,7 +72,7 @@ class RouteController {
           ),
         );
 
-      case '/searchDoctor':
+      case '/searchPage':
         return MaterialPageRoute(
           builder: (context) => SearchPage(),
         );

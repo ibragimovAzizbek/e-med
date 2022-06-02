@@ -19,8 +19,6 @@ class SearchCubit extends Cubit<SearchState> {
           .contains(value.toString().toLowerCase())) {
         doctorsSet.add({"id": i, "name": doctors[i], "position": position[i]});
       }
-      // value.toLowerCase() == doctors[i].toLowerCase()) {
-      // doctorsSet.add({"id": i, 'name': doctors[i], 'position': position[i]});
     }
     debugPrint("SETTTTT: !!!  $doctorsSet.toString()");
     emit(SearchInitial());

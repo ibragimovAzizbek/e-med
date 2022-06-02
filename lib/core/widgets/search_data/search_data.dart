@@ -13,6 +13,7 @@ class SearchData extends StatelessWidget {
     return Center(
       child: GestureDetector(
         child: Container(
+          alignment: Alignment.center,
           height: context.h * 0.05,
           width: context.w * 0.8,
           decoration: BoxDecoration(
@@ -20,9 +21,11 @@ class SearchData extends StatelessWidget {
             borderRadius: BorderRadius.circular(12),
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Icon(Icons.search),
+              SizedBox(width: context.w * 0.03),
               Text(searchName),
             ],
           ),

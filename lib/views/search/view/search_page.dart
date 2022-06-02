@@ -39,7 +39,9 @@ class SearchPage extends StatelessWidget {
                             child: TextField(
                               controller:
                                   context.watch<SearchCubit>().searchController,
-                              decoration: const InputDecoration(hintText: "Type what you want to search for ..."),
+                              decoration: const InputDecoration(
+                                  hintText:
+                                      "Type what you want to search for ..."),
                               onChanged: (value) {
                                 context
                                     .read<SearchCubit>()

@@ -17,7 +17,7 @@ class HomeDoctorBody extends StatelessWidget {
           homeAppBarNotNotification,
           SearchData(
             searchName: "Search doctors by name or position",
-            route: '/searchDoctor',
+            route: '/searchPage',
           ),
           const Divider(),
           Padding(
