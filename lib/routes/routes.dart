@@ -1,3 +1,4 @@
+import 'package:emed/core/widgets/homeView/hospital/hospital_info_page.dart';
 import 'package:emed/core/widgets/search_data/search_data.dart';
 import 'package:emed/views/addNewAppointment/view/add_appoinmet_with_doctor_info_page.dart';
 import 'package:emed/views/addNewAppointment/view/add_appointment_view.dart';
@@ -74,7 +75,12 @@ class RouteController {
 
       case '/searchPage':
         return MaterialPageRoute(
-          builder: (context) => SearchPage(),
+          builder: (context) => const SearchPage(),
+        );
+
+      case '/infoHospital':
+        return MaterialPageRoute(
+          builder: (context) => const HospitalInfo(),
         );
     }
     return null;

@@ -43,67 +43,72 @@ class HomeHospetalBody extends StatelessWidget {
     );
   }
 
-  Column hospitalData(BuildContext context, {required int index}) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Stack(
-          children: [
-            Center(
-              child: Container(
-                height: context.h * 0.35,
-                width: context.w * 0.9,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      'https://source.unsplash.com/random/$index',
+  GestureDetector hospitalData(BuildContext context, {required int index}) {
+    return GestureDetector(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Stack(
+            children: [
+              Center(
+                child: Container(
+                  height: context.h * 0.35,
+                  width: context.w * 0.9,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                        'https://source.unsplash.com/random/$index',
+                      ),
+                      fit: BoxFit.cover,
                     ),
-                    fit: BoxFit.cover,
+                    borderRadius: BorderRadius.circular(12),
                   ),
-                  borderRadius: BorderRadius.circular(12),
                 ),
               ),
-            ),
-            Positioned(
-              top: 10,
-              left: 30,
-              child: Row(
-                children: [
-                  dateContainerView(
-                    context,
-                    w: 0.28,
-                    icon: Icons.calendar_month_outlined,
-                    text: "Mon-Sat",
-                  ),
-                  SizedBox(width: context.w * 0.03),
-                  dateContainerView(
-                    context,
-                    w: 0.32,
-                    icon: Icons.watch_later_outlined,
-                    text: "09:00 - 18:00",
-                  ),
-                ],
+              Positioned(
+                top: 10,
+                left: 30,
+                child: Row(
+                  children: [
+                    dateContainerView(
+                      context,
+                      w: 0.28,
+                      icon: Icons.calendar_month_outlined,
+                      text: "Mon-Sat",
+                    ),
+                    SizedBox(width: context.w * 0.03),
+                    dateContainerView(
+                      context,
+                      w: 0.32,
+                      icon: Icons.watch_later_outlined,
+                      text: "09:00 - 18:00",
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
-        ),
-        SizedBox(height: context.h * 0.014),
-        textDarck(
-          "Uzbekistan New International Clinic",
-          context,
-          size: FontConst.kTextLargeFont,
-          color: ColorConst.darck90,
-          fontWeight: FontWeight.bold,
-        ),
-        const SizedBox(height: 5),
-        textDarck(
-          "Tashkent, Shaykhontokhur, Navoi street",
-          context,
-          size: FontConst.kMediumFont,
-          color: ColorConst.darck60,
-        ),
-        SizedBox(height: context.h * 0.03),
-      ],
+            ],
+          ),
+          SizedBox(height: context.h * 0.014),
+          textDarck(
+            "Uzbekistan New International Clinic",
+            context,
+            size: FontConst.kTextLargeFont,
+            color: ColorConst.darck90,
+            fontWeight: FontWeight.bold,
+          ),
+          const SizedBox(height: 5),
+          textDarck(
+            "Tashkent, Shaykhontokhur, Navoi street",
+            context,
+            size: FontConst.kMediumFont,
+            color: ColorConst.darck60,
+          ),
+          SizedBox(height: context.h * 0.03),
+        ],
+      ),
+      onTap: () {
+        Navigator.pushNamed(context, '/infoHospital');
+      },
     );
   }
 
@@ -123,10 +128,7 @@ class HomeHospetalBody extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Icon(
-            icon,
-            color: ColorConst.darck60,
-          ),
+          Icon(icon, color: ColorConst.darck60),
           Text(
             text,
             style: TextStyle(color: ColorConst.darck60),
