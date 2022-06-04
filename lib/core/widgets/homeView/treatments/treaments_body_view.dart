@@ -86,7 +86,7 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
             child: ListView.builder(
               itemCount: drugs.length,
               itemBuilder: (context, index) {
-                return SizedBox();
+                return drugHistoryMoldBasic(context, index);
               },
             ),
           )
@@ -95,7 +95,55 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
     );
   }
 
-  
+  // ? Drug history basic mold (:
+
+  InkWell drugHistoryMoldBasic(BuildContext context, int index) {
+    return InkWell(
+      child: Column(
+        children: [
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              textDarck(
+                drugs[index],
+                context,
+                size: FontConst.kTextLargeFont,
+                color: ColorConst.darck90,
+                fontWeight: FontWeight.bold,
+              ),
+              const Icon(
+                Icons.chevron_right_sharp,
+                color: ColorConst.darck60,
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              textDarck(
+                drugsMl[index],
+                context,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: textDarck(
+                  "26.05.2022 - 05.31.2022",
+                  context,
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: 10),
+          const Divider(thickness: 1.5)
+        ],
+      ),
+      onTap: () {
+        Navigator.pushNamed(context, '/infoDrug', arguments: index);
+      },
+    );
+  }
 
   // ? ListView with builder history
 

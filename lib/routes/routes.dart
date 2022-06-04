@@ -84,7 +84,9 @@ class RouteController {
           builder: (context) => const HospitalInfo(),
         );
 
-      
+      case '/infoDrug':
+        return MaterialPageRoute(
+            builder: (context) => InfoDrugPage(index: args as int));
     }
     return null;
   }
