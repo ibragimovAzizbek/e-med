@@ -280,3 +280,21 @@ List<String> drugsMl = [
   "500 mg",
   "100 mg",
 ];
+
+List<String> drugDetalisInName = [
+  "Drug name",
+  "Dose",
+  "Taking dates (start-end)",
+  "How many times",
+  "Associated with",
+  "Comments",
+];
+
+List<dynamic> drugDetalisInValue = [
+  drugs,
+  drugsMl,
+  "20.11.2021 - 30.11.2021",
+  "2 times a day",
+  "Multiple sclerosis",
+  "Consume without water.\nIt lessens the effect"
+];
