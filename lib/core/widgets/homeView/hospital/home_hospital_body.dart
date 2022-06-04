@@ -23,7 +23,6 @@ class HomeHospetalBody extends StatelessWidget {
               "Recommended hospitals for you",
               context,
               size: FontConst.kTextLargeFont,
-              color: ColorConst.darck60,
             ),
             SizedBox(height: context.h * 0.02),
             SizedBox(
@@ -101,7 +100,6 @@ class HomeHospetalBody extends StatelessWidget {
             "Tashkent, Shaykhontokhur, Navoi street",
             context,
             size: FontConst.kMediumFont,
-            color: ColorConst.darck60,
           ),
           SizedBox(height: context.h * 0.03),
         ],

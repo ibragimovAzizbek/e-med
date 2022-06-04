@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:emed/core/components/home_body_comp/text_darck_60_90.dart';
 import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/core/constants/font_const.dart';
 import 'package:emed/data/mock/regions_district/mock_data.dart';
@@ -78,17 +79,94 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
         controller: _tabController,
         children: [
           currentTreatment(context),
-          Container(
-            height: 60,
-            width: 300,
-            color: ColorConst.blue,
-          ),
-          Container(
-            height: 60,
-            width: 300,
-            color: ColorConst.black,
-          ),
+          medicalHistory(context),
+          SizedBox(
+            height: context.h,
+            width: double.infinity,
+            child: ListView.builder(
+              itemCount: drugs.length,
+              itemBuilder: (context, index) {
+                return SizedBox();
+              },
+            ),
+          )
         ],
+      ),
+    );
+  }
+
+  
+
+  // ? ListView with builder history
+
+  SizedBox medicalHistory(BuildContext context) {
+    return SizedBox(
+      height: context.h,
+      width: double.infinity,
+      child: ListView.builder(
+        itemCount: 3,
+        itemBuilder: (context, index) {
+          return historyMedicalBody(context, index);
+        },
+      ),
+    );
+  }
+
+  // * history mold basic
+
+  Padding historyMedicalBody(BuildContext context, int index) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 15),
+      child: InkWell(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                textDarck(
+                  "Anthrax [Bacillus anthracis Infection]",
+                  context,
+                  size: FontConst.kTextLargeFont,
+                  color: ColorConst.darck90,
+                  fontWeight: FontWeight.bold,
+                ),
+                const Icon(
+                  Icons.chevron_right_outlined,
+                  size: 27,
+                )
+              ],
+            ),
+            SizedBox(height: context.h * 0.01),
+            textDarck(
+              doctors[index],
+              context,
+              size: FontConst.kTextLargeFont,
+              color: ColorConst.darck90,
+            ),
+            SizedBox(height: context.h * 0.01),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                textDarck(
+                  "Clinic Medion",
+                  context,
+                ),
+                Padding(
+                  padding: EdgeInsets.only(right: context.w * 0.03),
+                  child: textDarck(
+                    "25.06.2022",
+                    context,
+                  ),
+                ),
+              ],
+            ),
+            Divider(indent: context.w * 0.068, thickness: 1.5),
+          ],
+        ),
+        onTap: () {
+          Navigator.pushNamed(context, '/infoDoctor', arguments: index);
+        },
       ),
     );
   }
@@ -123,7 +201,8 @@ class _TreamentsBodyViewState extends State<TreamentsBodyView>
                   );
                 },
               ),
-              const Divider(indent: 20),
+              const SizedBox(height: 5),
+              const Divider(indent: 20, thickness: 1.5),
               SizedBox(height: FontConst.kExtraSmallFont),
             ],
           );

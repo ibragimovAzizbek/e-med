@@ -1,11 +1,12 @@
+import 'package:emed/core/constants/color_const.dart';
 import 'package:emed/extension/mq_extension.dart';
 import 'package:flutter/material.dart';
 
 Padding textDarck(
   text,
   BuildContext context, {
-  required double size,
-  required Color color,
+  Color color = ColorConst.darck60,
+  double size = 14,
   fontWeight = FontWeight.normal,
 }) {
   return Padding(

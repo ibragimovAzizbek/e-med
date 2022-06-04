@@ -75,7 +75,6 @@ class HospitalInfo extends StatelessWidget {
               "Phone number",
               context,
               size: FontConst.kTextLargeFont,
-              color: ColorConst.darck60,
             ),
             SizedBox(height: context.h * 0.003),
             Row(
@@ -100,7 +99,6 @@ class HospitalInfo extends StatelessWidget {
               "Working time",
               context,
               size: FontConst.kMediumFont,
-              color: ColorConst.darck60,
             ),
             SizedBox(height: context.h * 0.02),
             textDarck(
@@ -123,7 +121,6 @@ class HospitalInfo extends StatelessWidget {
               "Location",
               context,
               size: FontConst.kMediumFont,
-              color: ColorConst.darck60,
             ),
             SizedBox(height: context.h * 0.01),
             textDarck(
@@ -138,7 +135,6 @@ class HospitalInfo extends StatelessWidget {
               "Location link",
               context,
               size: FontConst.kMediumFont,
-              color: ColorConst.darck60,
             ),
             Padding(
               padding: EdgeInsets.only(left: context.w * 0.035),

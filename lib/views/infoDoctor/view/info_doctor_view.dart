@@ -41,7 +41,7 @@ class InfoDoctorView extends StatelessWidget {
             Center(
               child: Text(
                 position[index],
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   color: ColorConst.darck60,
                 ),
@@ -51,7 +51,6 @@ class InfoDoctorView extends StatelessWidget {
             textDarck(
               "Place of work",
               context,
-              color: ColorConst.darck60,
               size: FontConst.kMediumFont,
             ),
             const SizedBox(height: 10),
@@ -67,7 +66,6 @@ class InfoDoctorView extends StatelessWidget {
             textDarck(
               "Work location",
               context,
-              color: ColorConst.darck60,
               size: FontConst.kMediumFont,
             ),
             const SizedBox(height: 10),
@@ -85,7 +83,6 @@ class InfoDoctorView extends StatelessWidget {
             textDarck(
               "Available time",
               context,
-              color: ColorConst.darck60,
               size: FontConst.kMediumFont,
             ),
             const SizedBox(height: 10),
@@ -101,7 +98,6 @@ class InfoDoctorView extends StatelessWidget {
             textDarck(
               "Rating",
               context,
-              color: ColorConst.darck60,
               size: FontConst.kMediumFont,
             ),
             Padding(

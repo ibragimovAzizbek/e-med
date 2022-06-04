@@ -9,6 +9,7 @@ import 'package:emed/views/auth/view/sign_in_or_register.dart';
 import 'package:emed/views/auth/view/signUp/sign_up_view.dart';
 import 'package:emed/views/home/view/home_view.dart';
 import 'package:emed/views/infoDoctor/view/info_doctor_view.dart';
+import 'package:emed/views/info_drugs/info_drugs_page.dart';
 import 'package:emed/views/search/view/search_page.dart';
 import 'package:emed/views/splash/splash_page.dart';
 import 'package:emed/views/traetments/treatments_detalis_page.dart';
@@ -82,6 +83,8 @@ class RouteController {
         return MaterialPageRoute(
           builder: (context) => const HospitalInfo(),
         );
+
+      
     }
     return null;
   }

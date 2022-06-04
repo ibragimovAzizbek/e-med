@@ -67,7 +67,7 @@ class TreanmentDetalisPage extends StatelessWidget {
             Center(
               child: Text(
                 position[indexDoctor],
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 16,
                   color: ColorConst.darck60,
                 ),
@@ -250,7 +250,7 @@ Since low potassium sometimes can affect your blood pressure, your doctor will c
               children: [
                 Text(
                   mg,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: ColorConst.darck60,
                   ),
                 ),

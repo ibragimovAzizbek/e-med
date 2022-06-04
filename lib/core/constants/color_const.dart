@@ -13,6 +13,6 @@ class ColorConst {
   static Color blue = const Color(0xFF4F8FC0);
   static Color bottomBackGround = const Color(0xFFF5F5F5);
   static Color bottomLabel = const Color(0xFF6A6975);
-  static Color darck60 = const Color(0xFF393647);
+  static const Color darck60 =  Color(0xFF393647);
   static Color darck90 = const Color(0xFF201D30);
 }
